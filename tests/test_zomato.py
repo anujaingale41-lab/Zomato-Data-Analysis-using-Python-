@@ -5,9 +5,9 @@ import os
 # Fixture to load the dataset
 @pytest.fixture
 def zomato_df():
-    path = "zomato.csv"
+    path = "zomato.xlsx"
     assert os.path.exists(path), f"{path} not found"
-    return pd.read_csv(path)
+    return pd.read_excel(path)
 
 # Test 1: Dataset should not be empty
 def test_dataset_not_empty(zomato_df):
